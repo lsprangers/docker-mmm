@@ -17,5 +17,5 @@ deploy:
  bucket_path: "resources/_runtime/_embedded_extensions/docker-mmm/"
  on:
   branch: main
- access_key_id: $docker-mmm-travis-ci-keyID 
- secret_access_key: "$docker-mmm-travis-ci-key "
+ access_key_id: "$docker-mmm-travis-ci-keyID" 
+ secret_access_key: "$docker-mmm-travis-ci-key"
