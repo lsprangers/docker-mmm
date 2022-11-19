@@ -7,3 +7,15 @@ before_install:
 
 script:
  - docker run -e CI=true lsprangers/docker-mmm npm run test -- --coverage
+
+deploy:
+ provider: elasticbeanstalk
+ region: "us-east-1"
+ app: "docker-mmm"
+ env: "Dockermmm-env"
+ bucekt_name: "elasticbeanstalk-us-east-1-954572926261"
+ bucket_path: "resources/_runtime/_embedded_extensions/docker-mmm/"
+ on:
+  branch: main
+ access_key_id: $docker-mmm-travis-ci-keyID 
+ secret_access_key: "$docker-mmm-travis-ci-key "
