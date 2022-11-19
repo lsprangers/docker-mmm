@@ -13,4 +13,5 @@ RUN npm run build
 # Default command of nginx container will start up everything we move here so we
 #   don't have to actually include a CMD
 FROM nginx
+EXPOSE 80
 COPY --from=builder /app/build /usr/share/nginx/html
